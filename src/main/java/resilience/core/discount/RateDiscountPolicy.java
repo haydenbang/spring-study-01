@@ -1,8 +1,10 @@
 package resilience.core.discount;
 
+import org.springframework.stereotype.Component;
 import resilience.core.member.Grade;
 import resilience.core.member.Member;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private final int discountRate = 10;

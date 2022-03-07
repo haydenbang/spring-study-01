@@ -1,10 +1,15 @@
 package resilience.core.discount;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import resilience.core.annotation.MainDiscountPolicy;
 import resilience.core.member.Grade;
 import resilience.core.member.Member;
 
 @Component
+@MainDiscountPolicy
+//@Primary
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private final int discountRate = 10;
